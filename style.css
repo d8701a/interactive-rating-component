@@ -1,0 +1,191 @@
+/* Contents 
+1. General styling
+2. .wrapper__main and .wrapper__thanks CSS 
+3. Wrapper__main CSS 
+4. Wrapper-thanks CSS 
+5. Javascript-needed classes
+6. Attribution CSS */
+
+
+/* 1. General styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    list-style: none;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-orange: hsl(25, 97%, 53%);
+    --clr-white: hsl(0, 0%, 100%); 
+    --clr-light-grey: hsl(217, 12%, 63%);
+    --clr-mdm-grey: hsl(216, 12%, 54%);
+    --clr-dark-blue: hsl(213, 19%, 18%);
+    --clr-verydark-blue: hsl(216, 12%, 8%);
+    --btn-bcg-color: #262f38;
+
+    --font-family-primary: 'Outfit', sans-serif;
+
+    --bcg-color: hsl(213, 19%, 18%);
+};
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family-primary), sans-serif;
+    font-size: 1.5rem;
+    position: relative;
+    background-color: black;
+}
+
+/* 2. .wrapper__main & .wrapper__thanks CSS */ 
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper__main-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: hsl(213, 20%, 22%);
+}
+
+.wrapper__main, .wrapper__thanks {
+     display: flex;
+     flex-direction: column;
+     width: clamp(300px, 35vw, 415px);
+     /* width: max(10vw, 415px); come back to this */
+     background-color: var(--btn-bcg-color);
+     color: var(--clr-white);
+     border-radius: 20px;
+     padding: 25px 30px;
+}
+
+.wrapper__main h2, .wrapper__thanks h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.wrapper__main p, .wrapper__thanks p {
+    color: var(--clr-mdm-grey);
+    font-size: .96rem;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+/* 3. Wrapper__main CSS */
+
+.wrapper__main ul {
+   display: flex;
+   justify-content: space-around;
+   align-content: center;  
+   /* flex-wrap: wrap;  */ /*not really necessary for responsiveness */
+}
+
+.btn {
+    color: var(--clr-mdm-grey);
+    font-size: 1rem;
+    background-color: hsl(213, 20%, 22%);
+    border: none;
+    border-radius: 100%;
+    padding: 15px 20px;
+    margin: 35px 0;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--clr-orange);
+    color: var(--clr-white);
+}
+
+.btn:active, .btn:focus {
+    background-color: var(--clr-light-grey);
+    color: var(--clr-white);
+}
+
+.btn--submit {
+    color: var(--clr-white);
+    font-size: 1rem;
+    font-family: var(--font-family-primary);
+    letter-spacing: .2cap;
+    background-color: var(--clr-orange);
+    border: none;
+    border-radius: 50px;
+    padding: 13px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.btn--submit:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-orange);
+}
+
+/* Wrapper-thanks CSS */
+
+.wrapper__thanks {
+    color: var(--clr-white);
+    align-items: center;
+    text-align: center;
+}
+
+.wrapper__thanks img {
+    width: 10rem;
+    height: auto;
+    margin-top: 20px;
+}
+
+.wrapper__thanks p {
+    margin-bottom: 10px;
+}
+
+p.rating {
+    color: var(--clr-orange);
+    background-color: hsl(213, 20%, 22%);
+    border-radius: 50px;
+    padding: 2px 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+ 
+}
+
+/* 5. Javascript-needed classes */
+
+.hidden {
+    display: none;
+}
+
+
+/* 6. Attribution CSS */
+
+.attribution { 
+    position: absolute;
+    font-size: 1.5rem; 
+    text-align: center;
+    transform: translate(-50%, 50%);
+    left: 50%;
+    bottom: 0;
+    color: white;
+};
+
+.attribution a { 
+    color: white; 
+}
